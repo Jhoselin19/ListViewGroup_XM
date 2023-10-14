@@ -14,8 +14,6 @@ namespace App6
         {
             InitializeComponent();
 
-
-
             List<Estudiante> estudiantes1 = new List<Estudiante>
             {
                 new Estudiante { Nombres = "Juan", Apellidos = "Pérez", Edad = 19, Seccion = "Seccion A" },
@@ -35,7 +33,13 @@ namespace App6
                 new Estudiante { Nombres ="Pedro", Apellidos="Torres", Edad=33, Seccion="Seccion D"},
             };
 
+            // Agrupar los estudiantes por sección usando LINQ
+            // El método GroupBy crea un nuevo grupo para cada sección única en la lista de estudiantes
+
             var groupedStudents = estudiantes1.GroupBy(e => e.Seccion);
+
+            // Asignar los grupos de estudiantes al ListView
+            // ListView mostrará automáticamente los estudiantes agrupados por sección
 
             lvEstudiantes1.ItemsSource = groupedStudents;
         }
