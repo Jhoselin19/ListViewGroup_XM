@@ -14,12 +14,12 @@
                 </x:Array>
             </ListView.ItemsSource>
         </ListView>-->
-        <ListView x:Name="lvEstudiantes1">
+        <ListView x:Name="lvEstudiantes1" IsGroupingEnabled="True">
             <ListView.GroupHeaderTemplate>
                 <DataTemplate>
                     <ViewCell>
-                        <StackLayout BackgroundColor="LightGray">
-                            <Label Text="{Binding Key}" FontSize="Large" TextColor="Black" />
+                        <StackLayout BackgroundColor="LightPink">
+                            <Label Text="{Binding Key}" TextColor="White" FontSize="Large"  HorizontalTextAlignment="Center"  />
                         </StackLayout>
                     </ViewCell>
                 </DataTemplate>
@@ -27,15 +27,17 @@
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>
-                        <StackLayout Orientation="Horizontal" Spacing="50" BackgroundColor="Green">
-                            <Label Text="{Binding Nombres}" TextColor="White" FontSize="Medium" />
-                            <Label Text="{Binding Apellidos}" TextColor="White" FontSize="Medium" />
-                            <Label Text="{Binding Edad}" FontSize="Large" TextColor="Red" />
+                        <StackLayout Orientation="Horizontal" BackgroundColor="Black">
+                            <Label Text="{Binding Nombres}" />
+                            <Label Text="{Binding Apellidos}" />
+                            <Label Text=" - Edad: " />
+                            <Label Text="{Binding Edad}" />
                         </StackLayout>
                     </ViewCell>
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
+
 
     </StackLayout>
 
